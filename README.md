@@ -29,3 +29,12 @@ La sortie est gérée, dans un cadre **CRA**, par **react-scripts**. Nous exécu
 Oui, TypeScript peut fonctionner avec React et webpack. Heureusement pour vous, la documentation du Webpack contient un [guide](https://webpack.js.org/guides/typescript/) à ce sujet.
 
 J'espère que cela vous donnera un léger rappel sur la façon dont les deux fonctionnent ensemble. Maintenant, passons aux meilleures pratiques!
+
+## Les meilleures pratiques
+
+L'une des parties du développement les moins amusantes mais les plus importantes est la configuration. Comment pouvons-nous mettre en place les choses dans les plus brefs délais pour offrir une efficacité et une productivité maximales? Nous aborderons la configuration du projet, notamment:
+
+* <code>tsconfig.json</code>
+* ESLint
+* Prettier
+* VS Code extensions and settings.
