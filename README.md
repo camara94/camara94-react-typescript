@@ -16,3 +16,10 @@ Une question courante qu'il est toujours bon d'examiner est de savoir si TypeScr
 **React**: "Ouais!"
 **TS**: «Cool! Je vais le compiler et m'assurer que vous n'avez rien manqué. "
 **React**: "Ça me semble bien!"
+
+
+La réponse est donc oui! Mais plus tard, lorsque nous aborderons les paramètres **tsconfig.json**, la plupart du temps, vous souhaiterez utiliser **"noEmit": true**. Cela signifie que **TypeScript** n'émettra pas de JavaScript après la compilation. En effet, généralement, nous n'utilisons que **TypeScript** pour effectuer notre vérification de type.
+
+La sortie est gérée, dans un cadre **CRA**, par **react-scripts**. Nous exécutons **yarn build** et **react-scripts** pour regroupe la sortie pour la production.
+
+>Pour récapituler, TypeScript compile votre code React pour vérifier le type de votre code. Il n'émet aucune sortie JavaScript (dans la plupart des scénarios). La sortie est toujours similaire à un projet React non TypeScript.
