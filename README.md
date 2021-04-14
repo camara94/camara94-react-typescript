@@ -146,3 +146,14 @@ Afin de vous assurer que votre code suit les règles du projet ou de votre équi
 </code>
 
 Ces recommandations proviennent d'une ressource communautaire écrite intitulée [Utilisation d'ESLint et de Prettier dans un projet TypeScript](https://robertcooper.me/post/using-eslint-and-prettier-in-a-typescript-project), par Robert Cooper. Si vous visitez cette ressource, vous pouvez en savoir plus sur le «pourquoi» de ces règles et configurations
+
+### VS Code Extensions and Settings
+Nous avons ajouté ESLint et Prettier et la prochaine étape pour améliorer notre DX est de corriger / embellir automatiquement notre code lors de l'enregistrement.
+
+Tout d'abord, installez [l'extension ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) et [l'extension Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) pour VS Code. Cela permettra à ESLint de s'intégrer à votre éditeur de manière transparente.<br/>
+Ensuite, mettez à jour les paramètres de votre espace de travail en ajoutant les éléments suivants à votre<br /><code>.vscode/settings.json</code>
+Cela permettra à VS Code de faire fonctionner sa magie et de corriger votre code lorsque vous enregistrez. C'est beau!
+
+Ces suggestions proviennent également de l'article précédemment lié [Utilisation d'ESLint et de Prettier dans un projet TypeScript](https://robertcooper.me/post/using-eslint-and-prettier-in-a-typescript-project), par Robert Cooper.
+
+>Remarque: pour en savoir plus sur <code>React.FC</code>, regardez [ici](https://github.com/typescript-cheatsheets/react#function-components), et lisez [ici](https://github.com/typescript-cheatsheets/react#useful-react-prop-type-examples) pour <code>React.ReactNode</code>
