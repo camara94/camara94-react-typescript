@@ -38,3 +38,56 @@ L'une des parties du développement les moins amusantes mais les plus importante
 * ESLint
 * Prettier
 * VS Code extensions and settings.
+
+## Configuration du projet
+Le moyen le plus rapide de démarrer une application **React / TypeScript** consiste à utiliser <code>create-react-app</code> avec le modèle TypeScript. Vous pouvez le faire en exécutant:
+
+<code>npx create-react-app guinnea-market --template typescript</code>
+
+Cela vous donnera le strict minimum pour commencer à écrire React avec TypeScript. Quelques différences notables sont:
+
+* l'extension de fichier <code>.tsx</code>
+* le <code>tsconfig.json</code>
+* le <code>react-app-env.d.ts</code>
+
+Le tsx est pour «TypeScript JSX». Le <code>tsconfig.json</code> est le fichier de configuration TypeScript, dont certaines valeurs par défaut sont définies. Le <code>react-app-env.d.ts</code> fait référence aux types de <code>react-scripts</code>, et aide par exemple à autoriser les importations SVG
+
+### tsconfig.json
+Heureusement pour nous, le dernier modèle **React / TypeScript** génère <code>tsconfig.json</code> pour nous. Cependant, ils ajoutent le strict minimum pour commencer. Nous vous suggérons de modifier le vôtre pour qu'il corresponde à celui ci-dessous. Nous avons ajouté des commentaires pour expliquer également le but de chaque option:<br/>
+
+<code>
+    <pre>
+        {
+        "compilerOptions": {
+            "target": "es5", // Specify ECMAScript target version
+            "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+            ], // List of library files to be included in the compilation
+            "allowJs": true, // Allow JavaScript files to be compiled
+            "skipLibCheck": true, // Skip type checking of all declaration files
+            "esModuleInterop": true, // Disables namespace imports (import * as fs from "fs") and enables CJS/AMD/UMD style imports (import fs from "fs")
+            "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+            "strict": true, // Enable all strict type checking options
+            "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+            "module": "esnext", // Specify module code generation
+            "moduleResolution": "node", // Resolve modules using Node.js style
+            "isolatedModules": true, // Unconditionally emit imports for unresolved files
+            "resolveJsonModule": true, // Include modules imported with .json extension
+            "noEmit": true, // Do not emit output (meaning do not compile code, only perform type checking)
+            "jsx": "react", // Support JSX in .tsx files
+            "sourceMap": true, // Generate corrresponding .map file
+            "declaration": true, // Generate corresponding .d.ts file
+            "noUnusedLocals": true, // Report errors on unused locals
+            "noUnusedParameters": true, // Report errors on unused parameters
+            "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
+            "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
+        },
+        "include": [
+            "src/**/*" // *** The files TypeScript should type check ***
+        ],
+        "exclude": ["node_modules", "build"] // *** The files to not type check ***
+        }
+    </pre>
+</code>
