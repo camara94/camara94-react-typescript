@@ -91,3 +91,58 @@ Heureusement pour nous, le dernier modèle **React / TypeScript** génère <code
         }
     </pre>
 </code>
+
+Les recommandations supplémentaires proviennent de la [communauté react-typescript-cheatsheet](https://github.com/typescript-cheatsheets/react) et les explications proviennent de la documentation sur les [options du compilateur](https://www.typescriptlang.org/docs/handbook/compiler-options.html) dans le manuel officiel de TypeScript. Ceci est une ressource merveilleuse si vous voulez en savoir plus sur les autres options et ce qu'elles font.
+
+### ESLint/Prettier
+Afin de vous assurer que votre code suit les règles du projet ou de votre équipe et que le style est cohérent, il est recommandé de configurer ESLint et Prettier. Pour les faire jouer correctement, suivez ces étapes pour le configurer.
+1. Installez les dépendances de développement requises:
+<code>yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react --dev</code>
+2. Créez un fichier .eslintrc.js à la racine et ajoutez ce qui suit:<br />
+   
+<code>
+    <pre>
+        module.exports =  {
+            parser:  '@typescript-eslint/parser',  // Specifies the ESLint parser
+            extends:  [
+                'plugin:react/recommended',  // Uses the recommended rules from @eslint-plugin-react
+                'plugin:@typescript-eslint/recommended',  // Uses the recommended rules from @typescript-eslint/eslint-plugin
+            ],
+            parserOptions:  {
+            ecmaVersion:  2018,  // Allows for the parsing of modern ECMAScript features
+            sourceType:  'module',  // Allows for the use of imports
+            ecmaFeatures:  {
+                jsx:  true,  // Allows for the parsing of JSX
+            },
+            },
+            rules:  {
+                // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
+                // e.g. "@typescript-eslint/explicit-function-return-type": "off",
+            },
+            settings:  {
+                react:  {
+                version:  'detect',  // Tells eslint-plugin-react to automatically detect the version of React to use
+                },
+            },
+        };
+    </pre>
+</code>
+
+
+3. Ajoutez des dépendances plus jolies
+    <code>yarn add prettier eslint-config-prettier eslint-plugin-prettier --dev</code>
+
+4. Créez un fichier <code>.prettierrc.js</code>  à la racine et ajoutez ce qui suit:
+<code>
+    <pre>
+        module.exports =  {
+            semi:  true,
+            trailingComma:  'all',
+            singleQuote:  true,
+            printWidth:  120,
+            tabWidth:  4,
+        };
+    </pre>
+</code>
+
+Ces recommandations proviennent d'une ressource communautaire écrite intitulée [Utilisation d'ESLint et de Prettier dans un projet TypeScript](https://robertcooper.me/post/using-eslint-and-prettier-in-a-typescript-project), par Robert Cooper. Si vous visitez cette ressource, vous pouvez en savoir plus sur le «pourquoi» de ces règles et configurations
