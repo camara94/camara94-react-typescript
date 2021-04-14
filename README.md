@@ -23,3 +23,9 @@ La réponse est donc oui! Mais plus tard, lorsque nous aborderons les paramètre
 La sortie est gérée, dans un cadre **CRA**, par **react-scripts**. Nous exécutons **yarn build** et **react-scripts** pour regroupe la sortie pour la production.
 
 >Pour récapituler, TypeScript compile votre code React pour vérifier le type de votre code. Il n'émet aucune sortie JavaScript (dans la plupart des scénarios). La sortie est toujours similaire à un projet React non TypeScript.
+
+## TypeScript peut-il fonctionner avec React et Webpack?
+
+Oui, TypeScript peut fonctionner avec React et webpack. Heureusement pour vous, la documentation du Webpack contient un [guide](https://webpack.js.org/guides/typescript/) à ce sujet.
+
+J'espère que cela vous donnera un léger rappel sur la façon dont les deux fonctionnent ensemble. Maintenant, passons aux meilleures pratiques!
